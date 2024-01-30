@@ -1,38 +1,235 @@
+/* Style général de la page */
 .App {
+  font-family: 'Arial', sans-serif;
+  color: #E6E6E6;
+  background-color: #303030; /* Gris anthracite */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style du header */
+header {
+  background-color: #212121; /* Plus foncé que le fond général */
+  padding: 20px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #00BFFF; /* Bleu électrique */
+  /* Animation existante */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav a {
+  text-decoration: none;
+  color: #E6E6E6;
+  margin: 0 15px;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav a:hover {
+  color: #00BFFF;
+  /* Animation existante */
 }
 
-.App-link {
-  color: #61dafb;
+/* Style des sections */
+section {
+  padding: 20px;
+  margin: 20px 0;
+  border-bottom: 1px solid #474747; /* Séparation subtile entre les sections */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+section h2 {
+  font-size: 2em;
+  color: #00BFFF; /* Bleu électrique pour les titres */
+}
+
+/* Style des listes */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Style de la section Contact */
+#contact p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+/* ABOUT */
+
+#about {
+  /* autres styles de base */
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideRightFadeIn 1s ease forwards;
+}
+
+@keyframes slideRightFadeIn {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
+
+#about h2, #about p {
+  transition: text-shadow 0.3s ease;
+}
+
+#about:hover h2, #about:hover p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  padding: 5%;
+}
+
+/* EDUCATION */
+#education {
+  /* autres styles de base */
+}
+
+#education ul {
+  padding: 0;
+  list-style: none;
+}
+
+#education li {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+#education li:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+#education li:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#education li:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Expérience */
+
+#experience {
+  /* autres styles de base */
+}
+
+#experience ul {
+  padding: 0;
+  list-style: none;
+}
+
+#experience li {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+#experience li:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+#experience li:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#experience li:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+/* Skills */
+#skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  text-align: center;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+#skills li {
+  background-color: #212121;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  color: #E6E6E6;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#skills li:hover {
+  background-color: #00BFFF;
+  color: #303030;
+}
+
+/* Contact */
+
+/* Contact */
+#contact {
+  /* Styles existants */
+  color: #E6E6E6;
+}
+
+#contact p:hover {
+  color: #00BFFF;
+  /* Autres styles existants */
+}
+
+/* Projet */
+
+/* Projet */
+#projets {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.projet {
+  width: 48%;
+  background-color: #212121;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #E6E6E6;
+}
+
+.projet h3 {
+  color: #00BFFF;
+}
+
+.projet a {
+  color: #00BFFF;
+  text-decoration: none;
+}
+
