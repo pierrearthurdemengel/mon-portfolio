@@ -62,11 +62,31 @@ ul li {
   margin-bottom: 10px;
 }
 
-/* Style de la section Contact */
-#contact p {
-  font-size: 1.2em;
-  margin: 5px 0;
+
+/* Style de la carte pour la section Contact */
+#contact {
+  background-color: #212121; /* Couleur de fond de la carte */
+  padding: 20px; /* Espace intérieur de la carte */
+  border-radius: 10px; /* Bords arrondis de la carte */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre portée pour donner un effet 3D */
+  max-width: 600px; /* Largeur maximale de la carte */
+  margin: 20px auto; /* Centrage de la carte avec une marge */
+  color: #E6E6E6; /* Couleur du texte dans la carte */
+  text-align: center; /* Alignement du texte au centre */
 }
+
+/* Styles pour les liens dans #contact */
+#contact a {
+  color: #00BFFF; /* Couleur des liens */
+  text-decoration: none; /* Supprime le soulignement par défaut */
+}
+
+/* Styles au survol pour les paragraphes et les liens */
+#contact p:hover, #contact a:hover {
+  color: #E6E6E6; /* Change la couleur au survol */
+  text-decoration: underline; /* Ajoute un soulignement au survol pour les liens */
+}
+
 
 /* ABOUT */
 
@@ -134,29 +154,6 @@ img {
 
 /* Expérience */
 
-#experience {
-  /* autres styles de base */
-}
-
-#experience ul {
-  padding: 0;
-  list-style: none;
-}
-
-#experience li {
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: slideInLeft 0.5s ease forwards;
-}
-
-#experience li:nth-child(1) {
-  animation-delay: 0.3s;
-}
-
-#experience li:nth-child(2) {
-  animation-delay: 0.6s;
-}
-
 @keyframes slideInLeft {
   to {
     opacity: 1;
@@ -164,40 +161,25 @@ img {
   }
 }
 
-#experience li:hover {
-  background-color: #f0f0f0;
-  transition: background-color 0.3s ease;
-}
 
-/* Skills */
-/* #skills {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  text-align: center;
-}
-
-#skills ul {
-  list-style: none;
-  padding: 0;
-}
-
-#skills li {
+#experience .card {
   background-color: #212121;
-  margin: 5px;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  color: #E6E6E6;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; 
+  text-align: center;
+  width: 30%;
+  display: block;
 }
 
-#skills li:hover {
-  background-color: #00BFFF;
-  color: #303030;
-} */
 
-/* Skills Carroussel */
+#experience img {
+  width: 80%; 
+}
+
+
+
 /* Style du carrousel de compétences */
 #skills {
   text-align: center;
