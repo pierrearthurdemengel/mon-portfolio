@@ -1,3 +1,7 @@
+/* Style Skill Caroussel */
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
 /* Style général de la page */
 .App {
   font-family: 'Arial', sans-serif;
@@ -166,7 +170,7 @@ img {
 }
 
 /* Skills */
-#skills {
+/* #skills {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
@@ -191,7 +195,60 @@ img {
 #skills li:hover {
   background-color: #00BFFF;
   color: #303030;
+} */
+
+/* Skills Carroussel */
+/* Style du carrousel de compétences */
+#skills {
+  text-align: center;
+  padding: 20px 0; /* Ajout d'un peu de padding autour du carrousel */
 }
+
+#skills .slick-list {
+  display: flex; /* conteneur du carrousel doit utiliser flex */
+}
+
+#skills .slick-track {
+  display: flex; /* Garde les slides sur la même ligne */
+  margin-bottom: 4%;
+}
+
+/* Styles des slides */
+#skills .slick-slide {
+  background-color: #212121;
+  margin: 10px; /* Ajuster selon l'espace nécessaire */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  color: #E6E6E6;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 0 auto;
+}
+
+#skills .slick-slide img {
+  max-width: 100px; /* Ajuster la taille des images */
+  margin-bottom: 10px; /* Espace entre l'image et le texte */
+}
+
+/* Styles au survol */
+#skills .slick-slide:hover {
+  background-color: #00BFFF;
+  color: #303030;
+}
+
+/* Personnalisation des contrôles du carrousel */
+.slick-dots li button:before {
+  color: #00BFFF; /* Couleur des points */
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #00BFFF; /* Couleur des flèches */
+}
+
 
 /* Contact */
 
@@ -206,22 +263,39 @@ img {
   /* Autres styles existants */
 }
 
+/* Styles pour les liens dans #contact */
+#contact a {
+  color: inherit; /* Hérite la couleur du parent, ici #E6E6E6 */
+  text-decoration: none; /* Supprime le soulignement par défaut */
+}
+
+/* Styles au survol pour les paragraphes et les liens */
+#contact p:hover, #contact a:hover {
+  color: #00BFFF; /* Change la couleur au survol */
+  text-decoration: none; /* Ajoute un soulignement au survol pour les liens */
+}
+
+
+
 /* Projet */
 
 /* Projet */
 #projets {
   display: flex;
-  justify-content: space-between;
   width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .projet {
-  width: 48%;
+  width: 60%;
   background-color: #212121;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #E6E6E6;
+  margin: 1%;
 }
 
 .projet h3 {
@@ -233,3 +307,25 @@ img {
   text-decoration: none;
 }
 
+.container-tramstras {
+  display: flex; /* Utilise flexbox pour le positionnement */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+}
+
+.container-tramstras img {
+  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
+  height: auto; /* Garde le ratio de l'image */
+}
+
+
+.container-verifpassword {
+  display: flex; /* Utilise flexbox pour le positionnement */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+}
+
+.container-verifpassword img {
+  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
+  height: auto; /* Garde le ratio de l'image */
+}
