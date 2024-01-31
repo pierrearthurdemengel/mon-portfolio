@@ -117,40 +117,62 @@ img {
 }
 
 /* EDUCATION */
+/* Style de base de la section Éducation */
 #education {
-  /* autres styles de base */
+  margin: 20px auto;
+  border-radius: 8px; /* Bords arrondis pour un style moderne */
+  max-width: 800px; /* Contrôle de la largeur maximale pour le centrage */
 }
 
-#education ul {
-  padding: 0;
-  list-style: none;
+/* Style des éléments individuels d'éducation */
+.education-item {
+  background-color: #212121;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px; /* Bords arrondis */
+  color: #ecf0f1; /* Couleur de texte pour le contraste */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre douce */
+  transition: transform 0.5s ease, box-shadow 0.5s, easebackground-color 0.5s ease, color 0.3s ease; /* Transition douce pour l'hover */
 }
 
-#education li {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s ease forwards;
+.education-item:hover {
+  transform: translateY(-5px); /* Léger effet de levée au survol */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Ombre plus prononcée au survol */
+  background-color: #00BFFF;
+  color: #212121;
 }
 
-#education li:nth-child(1) {
-  animation-delay: 0.3s;
+/* Amélioration des titres et des paragraphes pour plus de lisibilité */
+#education h2, .education-item h3, .education-item p {
+  margin: 15px 0;
+  text-align: center;
 }
 
-#education li:nth-child(2) {
-  animation-delay: 0.6s;
-}
-
+/* Animation pour chaque élément d'éducation */
 @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-#education li:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+.education-item {
+  opacity: 0; /* Début avec l'élément invisible */
+  animation: fadeInUp 0.5s ease forwards; /* Applique l'animation */
 }
+
+/* Décalage de l'animation pour chaque élément d'éducation */
+.education-item:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.education-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
 
 /* Expérience */
 
